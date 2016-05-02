@@ -1,0 +1,29 @@
+{
+  "name": "matudelatower/ubicacion-bundle",
+  "description": "Bundle para pais provincia y localidad con datos en fixtures de Argentina",
+  "keywords": [
+    "ubicacion",
+    "pais",
+    "provincia",
+    "localidad",
+    "argentina"
+  ],
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matias Solis de la Torre",
+      "email": "matias.delatorre89@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "": ""
+    }
+  }
+}

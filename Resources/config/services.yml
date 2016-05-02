@@ -1,0 +1,4 @@
+services:
+#    ubicacion.example:
+#        class: Matudelatower\UbicacionBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

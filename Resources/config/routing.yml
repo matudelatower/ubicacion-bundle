@@ -1,0 +1,19 @@
+ubicacion_localidad:
+    resource: "@UbicacionBundle/Resources/config/routing/localidad.yml"
+    prefix:   /localidad
+
+ubicacion_departamento:
+    resource: "@UbicacionBundle/Resources/config/routing/departamento.yml"
+    prefix:   /departamento
+
+ubicacion_provincia:
+    resource: "@UbicacionBundle/Resources/config/routing/provincia.yml"
+    prefix:   /provincia
+
+ubicacion_pais:
+    resource: "@UbicacionBundle/Resources/config/routing/pais.yml"
+    prefix:   /pais
+
+ubicacion_homepage:
+    path:     /
+    defaults: { _controller: UbicacionBundle:Default:index }

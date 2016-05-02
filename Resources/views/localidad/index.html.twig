@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Localidad list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcion</th>
+                <th>Codigo</th>
+                <th>Codigopostal</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for localidad in localidads %}
+            <tr>
+                <td><a href="{{ path('localidad_show', { 'id': localidad.id }) }}">{{ localidad.id }}</a></td>
+                <td>{{ localidad.descripcion }}</td>
+                <td>{{ localidad.codigo }}</td>
+                <td>{{ localidad.codigoPostal }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('localidad_show', { 'id': localidad.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('localidad_edit', { 'id': localidad.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('localidad_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

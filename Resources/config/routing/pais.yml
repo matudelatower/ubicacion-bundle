@@ -1,0 +1,24 @@
+pais_index:
+    path:     /
+    defaults: { _controller: "UbicacionBundle:Pais:index" }
+    methods:  GET
+
+pais_show:
+    path:     /{id}/show
+    defaults: { _controller: "UbicacionBundle:Pais:show" }
+    methods:  GET
+
+pais_new:
+    path:     /new
+    defaults: { _controller: "UbicacionBundle:Pais:new" }
+    methods:  [GET, POST]
+
+pais_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UbicacionBundle:Pais:edit" }
+    methods:  [GET, POST]
+
+pais_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UbicacionBundle:Pais:delete" }
+    methods:  DELETE
