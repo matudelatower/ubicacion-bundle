@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Pais</h1>
+    <h1>País</h1>
 
     <table>
         <tbody>
@@ -10,24 +10,16 @@
                 <td>{{ pai.id }}</td>
             </tr>
             <tr>
-                <th>Descripcion</th>
+                <th>Descripcioón</th>
                 <td>{{ pai.descripcion }}</td>
             </tr>
             <tr>
-                <th>Codigopais</th>
+                <th>Codigo País</th>
                 <td>{{ pai.codigoPais }}</td>
             </tr>
             <tr>
-                <th>Codigoarea</th>
+                <th>Código Área</th>
                 <td>{{ pai.codigoArea }}</td>
-            </tr>
-            <tr>
-                <th>Creado</th>
-                <td>{% if pai.creado %}{{ pai.creado|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Actualizado</th>
-                <td>{% if pai.actualizado %}{{ pai.actualizado|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
         </tbody>
     </table>

@@ -49,8 +49,7 @@ class LoadProvinciaData extends AbstractFixture implements OrderedFixtureInterfa
 			$entidadProv = new Provincia();
 
 			$entidadProv->setDescripcion( $provincia['nombreProvincia'] );
-			$entidadProv->setPais( $manager->merge( $this->getReference( 'pais' . $provincia['id_pais'] ) ) );
-			$entidadProv->setCodigo();
+			$entidadProv->setPais( $this->getReference( 'pais' . $provincia['id_pais'] ) );
 
 
 			$manager->persist( $entidadProv );
