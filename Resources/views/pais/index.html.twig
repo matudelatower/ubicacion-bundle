@@ -10,8 +10,6 @@
                 <th>Descripcion</th>
                 <th>Codigopais</th>
                 <th>Codigoarea</th>
-                <th>Creado</th>
-                <th>Actualizado</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,8 +20,6 @@
                 <td>{{ pai.descripcion }}</td>
                 <td>{{ pai.codigoPais }}</td>
                 <td>{{ pai.codigoArea }}</td>
-                <td>{% if pai.creado %}{{ pai.creado|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if pai.actualizado %}{{ pai.actualizado|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>

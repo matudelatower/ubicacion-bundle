@@ -18,10 +18,6 @@ class PaisType extends AbstractType
             ->add('descripcion')
             ->add('codigoPais')
             ->add('codigoArea')
-            ->add('creado', 'datetime')
-            ->add('actualizado', 'datetime')
-            ->add('creadoPor')
-            ->add('actualizadoPor')
         ;
     }
     

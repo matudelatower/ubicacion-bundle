@@ -11,8 +11,7 @@ namespace Matudelatower\UbicacionBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Matudelatower\UbicacionBundle\Entity\Departamento;
-use Matudelatower\UbicacionBundle\Entity\Provincia;
+use Matudelatower\UbicacionBundle\Entity\Departamento
 
 
 class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInterface {
@@ -528,8 +527,7 @@ class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInte
 			$entidadDepartamento = new Departamento();
 
 			$entidadDepartamento->setDescripcion( $departamento['descripcion'] );
-			$entidadDepartamento->setProvincia( $manager->merge( $this->getReference( 'provincia' . $departamento['id_provincia'] ) ) );
-			$entidadDepartamento->setCodigo();
+			$entidadDepartamento->setProvincia( $this->getReference( 'provincia' . $departamento['id_provincia'] ) );
 
 
 			$manager->persist( $entidadDepartamento );
