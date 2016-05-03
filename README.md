@@ -60,4 +60,18 @@ Step 4: Load Fixtures
 $ php app/console doctrine:fixtures:load
 ```
 
+Step 5: Import UbicacionBundle routing files
+-------------------------
+
+```yml
+# app/config/routing.yml
+ubicacion:
+    resource: "@UbicacionBundle/Resources/config/routing.yml"
+    prefix:   /ubicacion
+```
+
 ##Enjoy!
+
+## TODO
+
+- [ ] País, provincia, departamento, localidad dependent combo widget.
