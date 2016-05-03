@@ -11,7 +11,7 @@ namespace Matudelatower\UbicacionBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Matudelatower\UbicacionBundle\Entity\Departamento
+use Matudelatower\UbicacionBundle\Entity\Departamento;
 
 
 class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInterface {
@@ -45,7 +45,7 @@ class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInte
 			array( 'id' => 65, 'descripcion' => 'Adolfo Alsina', 'id_provincia' => '2' ),
 			array( 'id' => 66, 'descripcion' => 'Adolfo Gonzales Chaves', 'id_provincia' => '2' ),
 			array( 'id' => 67, 'descripcion' => 'Alberti', 'id_provincia' => '2' ),
-			array( 'id' => 955, 'descripcion' => 'Almirante Brown', 'id_provinciaA' => '2' ),
+			array( 'id' => 955, 'descripcion' => 'Almirante Brown', 'id_provincia' => '2' ),
 			array( 'id' => 72, 'descripcion' => 'Avellaneda', 'id_provincia' => '2' ),
 			array( 'id' => 73, 'descripcion' => 'Ayacucho', 'id_provincia' => '2' ),
 			array( 'id' => 74, 'descripcion' => 'Azul', 'id_provincia' => '2' ),

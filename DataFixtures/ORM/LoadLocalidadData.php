@@ -21704,7 +21704,7 @@ class LoadLocalidadData extends AbstractFixture implements OrderedFixtureInterfa
 			$entidadLocalidad = new Localidad();
 
 			$entidadLocalidad->setDescripcion( $localidad[1] );
-			$entidadLocalidad->setProvincia( $this->getReference( 'departamento' . $localidad[4] ) );
+			$entidadLocalidad->setDepartamento( $this->getReference( 'departamento' . $localidad[4] ) );
 
 
 			$manager->persist( $entidadLocalidad );
