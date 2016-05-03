@@ -125,6 +125,27 @@ class Localidad {
         return $this->codigoPostal;
     }
 
+    /**
+     * Set departamento
+     *
+     * @param \Matudelatower\UbicacionBundle\Entity\Departamento $departamento
+     * @return Localidad
+     */
+    public function setDepartamento(\Matudelatower\UbicacionBundle\Entity\Departamento $departamento = null) {
+        $this->departamento = $departamento;
+
+        return $this;
+    }
+
+    /**
+     * Get departamento
+     *
+     * @return \Matudelatower\UbicacionBundle\Entity\Departamento
+     */
+    public function getDepartamento() {
+        return $this->departamento;
+    }
+
 
 
 }
