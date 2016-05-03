@@ -531,7 +531,7 @@ class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInte
 
 
 			$manager->persist( $entidadDepartamento );
-			$this->addReference( 'provincia' . $departamento['id'], $entidadDepartamento );
+			$this->addReference( 'departamento' . $departamento['id'], $entidadDepartamento );
 		}
 
 
