@@ -60,6 +60,7 @@ class Localidad {
      * @ORM\Column(name="longitud", type="string", length=255, nullable=true)
      */
     private $longitud;
+
     /**
      * @var string
      *
@@ -73,6 +74,7 @@ class Localidad {
      * @ORM\Column(name="nodo_osm", type="string", length=255, nullable=true)
      */
     private $nodoOsm;
+
     /**
      * @var string
      *
@@ -180,6 +182,75 @@ class Localidad {
         return $this->departamento;
     }
 
+    /**
+     * @return string
+     */
+    public function getLatitud() {
+        return $this->latitud;
+    }
+
+    /**
+     * @param string $latitud
+     */
+    public function setLatitud( $latitud ) {
+        $this->latitud = $latitud;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLongitud() {
+        return $this->longitud;
+    }
+
+    /**
+     * @param string $longitud
+     */
+    public function setLongitud( $longitud ) {
+        $this->longitud = $longitud;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPoblacion() {
+        return $this->poblacion;
+    }
+
+    /**
+     * @param string $poblacion
+     */
+    public function setPoblacion( $poblacion ) {
+        $this->poblacion = $poblacion;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNodoOsm() {
+        return $this->nodoOsm;
+    }
+
+    /**
+     * @param string $nodoOsm
+     */
+    public function setNodoOsm( $nodoOsm ) {
+        $this->nodoOsm = $nodoOsm;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWikipedia() {
+        return $this->wikipedia;
+    }
+
+    /**
+     * @param string $wikipedia
+     */
+    public function setWikipedia( $wikipedia ) {
+        $this->wikipedia = $wikipedia;
+    }
 
 
 }

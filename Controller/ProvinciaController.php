@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Matudelatower\UbicacionBundle\Entity\Provincia;
-use Matudelatower\UbicacionBundle\Form\Type\ProvinciaType;
 
 /**
  * Provincia controller.

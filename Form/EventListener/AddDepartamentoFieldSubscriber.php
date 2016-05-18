@@ -51,7 +51,7 @@ class AddDepartamentoFieldSubscriber implements EventSubscriberInterface {
 						$qb->join( 'dep.provincia', 'provincia' )
 						   ->where( 'provincia.id = :loc' )
 						   ->setParameter( 'loc', $provincia );
-					} elseif ( $provincia instanceof Matudelatower\UbicacionBundle\Entity\Provincia ) {
+					} elseif ( $provincia instanceof \Matudelatower\UbicacionBundle\Entity\Provincia ) {
 						$qb->join( 'dep.provincia', 'provincia' )
 						   ->where( 'provincia = :loc' )
 						   ->setParameter( 'loc', $provincia );
@@ -77,8 +77,6 @@ class AddDepartamentoFieldSubscriber implements EventSubscriberInterface {
 		$localidad    = $accessor->getValue( $data, 'localidad' );
 		$departamento = ( $localidad ) ? $localidad->getDepartamento() : null;
 		$provincia    = ( $departamento ) ? $departamento->getProvincia() : null;
-		$pais         = ( $provincia ) ? $provincia->getPais() : null;
-
 
 		$this->addDepartamentoForm( $form, $departamento, $provincia );
 	}
@@ -94,6 +92,5 @@ class AddDepartamentoFieldSubscriber implements EventSubscriberInterface {
 		$provincia    = array_key_exists( 'provincia', $data ) ? $data['provincia'] : null;
 		$this->addDepartamentoForm( $form, $departamento, $provincia );
 	}
-
 
 }

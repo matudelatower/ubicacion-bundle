@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Matudelatower\UbicacionBundle\Entity\Departamento;
-use Matudelatower\UbicacionBundle\Form\Type\DepartamentoType;
 
 /**
  * Departamento controller.
