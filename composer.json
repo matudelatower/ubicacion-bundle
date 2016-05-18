@@ -1,12 +1,14 @@
 {
   "name": "matudelatower/ubicacion-bundle",
-  "description": "Bundle para pais provincia y localidad con datos en fixtures de Argentina",
+  "description": "Bundle para manejar pais, provincia y localidad, con fixtures de datos de Argentina",
   "keywords": [
     "ubicacion",
     "pais",
     "provincia",
     "localidad",
-    "argentina"
+    "argentina",
+    "misiones",
+    "symfony"
   ],
   "type": "symfony-bundle",
   "license": "MIT",

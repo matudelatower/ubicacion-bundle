@@ -44,8 +44,16 @@ class AppKernel extends Kernel
     // ...
 }
 ```
+Step 3: Configure
+-------------------------
+```yml
+# app/config/config.yml
 
-Step 3: Update database
+matudelatower_ubicacion:
+    base_template: your_layout_base.html.twig
+```
+
+Step 4: Update database
 -------------------------
 
 ```bash
@@ -55,14 +63,14 @@ $ php app/console doc:sch:update --dump-sql
 to dump the SQL statements to the screen
 
 
-Step 4: Load Fixtures
+Step 5: Load Fixtures
 -------------------------
 
 ```bash
 $ php app/console doctrine:fixtures:load
 ```
 
-Step 5: Import UbicacionBundle routing files
+Step 6: Import UbicacionBundle routing files
 -------------------------
 
 ```yml
