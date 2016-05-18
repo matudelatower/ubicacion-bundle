@@ -14,7 +14,6 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
-use Matudelatower\UbicacionBundle\Entity\Departamento;
 
 class AddLocalidadFieldSubscriber implements EventSubscriberInterface {
 
@@ -50,7 +49,7 @@ class AddLocalidadFieldSubscriber implements EventSubscriberInterface {
 						$qb->join( 'loc.departamento', 'departamento' )
 						   ->where( 'departamento.id = :dep' )
 						   ->setParameter( 'dep', $departamento );
-					} elseif ( $departamento instanceof Matudelatower\UbicacionBundle\Entity\Departamento ) {
+					} elseif ( $departamento instanceof \Matudelatower\UbicacionBundle\Entity\Departamento ) {
 						$qb->join( 'loc.departamento', 'departamento' )
 						   ->where( 'departamento = :dep' )
 						   ->setParameter( 'dep', $departamento );
@@ -88,6 +87,5 @@ class AddLocalidadFieldSubscriber implements EventSubscriberInterface {
 		$departamento = array_key_exists( 'departamento', $data ) ? $data['departamento'] : null;
 		$this->addLocalidadForm( $form, $localidad , $departamento);
 	}
-
 
 }
