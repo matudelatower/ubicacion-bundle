@@ -47,6 +47,40 @@ class Localidad {
      */
     private $departamento;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="latitud", type="string", length=255, nullable=true)
+     */
+    private $latitud;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="longitud", type="string", length=255, nullable=true)
+     */
+    private $longitud;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="poblacion", type="string", length=255, nullable=true)
+     */
+    private $poblacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nodo_osm", type="string", length=255, nullable=true)
+     */
+    private $nodoOsm;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="wikipedia", type="string", length=255, nullable=true)
+     */
+    private $wikipedia;
+
+
 
 
     public function __toString() {

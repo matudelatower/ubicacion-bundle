@@ -343,23 +343,23 @@ class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInte
 			array( 'id' => 450, 'descripcion' => 'Santa Rosa', 'id_provincia' => '14' ),
 			array( 'id' => 451, 'descripcion' => 'Tunuyan', 'id_provincia' => '14' ),
 			array( 'id' => 452, 'descripcion' => 'Tupungato', 'id_provincia' => '14' ),
-			array( 'id' => 611, 'descripcion' => '25 De Mayo', 'id_provincia' => '15' ),
-			array( 'id' => 612, 'descripcion' => 'Apostoles', 'id_provincia' => '15' ),
-			array( 'id' => 613, 'descripcion' => 'Cainguas', 'id_provincia' => '15' ),
-			array( 'id' => 614, 'descripcion' => 'Candelaria', 'id_provincia' => '15' ),
-			array( 'id' => 615, 'descripcion' => 'Capital', 'id_provincia' => '15' ),
-			array( 'id' => 616, 'descripcion' => 'Concepcion', 'id_provincia' => '15' ),
-			array( 'id' => 618, 'descripcion' => 'El Dorado', 'id_provincia' => '15' ),
-			array( 'id' => 619, 'descripcion' => 'General Manuel Belgrano', 'id_provincia' => '15' ),
-			array( 'id' => 620, 'descripcion' => 'Guarani', 'id_provincia' => '15' ),
-			array( 'id' => 621, 'descripcion' => 'Iguazu', 'id_provincia' => '15' ),
-			array( 'id' => 622, 'descripcion' => 'Leandro N Alem', 'id_provincia' => '15' ),
-			array( 'id' => 623, 'descripcion' => 'Libertador Gral San Martin', 'id_provincia' => '15' ),
-			array( 'id' => 625, 'descripcion' => 'Montecarlo', 'id_provincia' => '15' ),
-			array( 'id' => 627, 'descripcion' => 'Obera', 'id_provincia' => '15' ),
-			array( 'id' => 628, 'descripcion' => 'San Ignacio', 'id_provincia' => '15' ),
-			array( 'id' => 629, 'descripcion' => 'San Javier', 'id_provincia' => '15' ),
-			array( 'id' => 630, 'descripcion' => 'San Pedro', 'id_provincia' => '15' ),
+			array( 'id' => 611, 'descripcion' => '25 De Mayo', 'id_provincia' => '15' , 'codigo_departamento'=> '17' ),
+			array( 'id' => 612, 'descripcion' => 'Apóstoles', 'id_provincia' => '15' , 'codigo_departamento'=> '1' ),
+			array( 'id' => 613, 'descripcion' => 'Cainguás', 'id_provincia' => '15' , 'codigo_departamento'=> '2' ),
+			array( 'id' => 614, 'descripcion' => 'Candelaria', 'id_provincia' => '15' , 'codigo_departamento'=> '3' ),
+			array( 'id' => 615, 'descripcion' => 'Capital', 'id_provincia' => '15' , 'codigo_departamento'=> '4' ),
+			array( 'id' => 616, 'descripcion' => 'Concepción', 'id_provincia' => '15' , 'codigo_departamento'=> '5' ),
+			array( 'id' => 618, 'descripcion' => 'Eldorado', 'id_provincia' => '15' , 'codigo_departamento'=> '6' ),
+			array( 'id' => 619, 'descripcion' => 'General Manuel Belgrano', 'id_provincia' => '15' , 'codigo_departamento'=> '7' ),
+			array( 'id' => 620, 'descripcion' => 'Guaraní', 'id_provincia' => '15' , 'codigo_departamento'=> '8' ),
+			array( 'id' => 621, 'descripcion' => 'Iguazú', 'id_provincia' => '15' , 'codigo_departamento'=> '9' ),
+			array( 'id' => 622, 'descripcion' => 'Leandro N Alem', 'id_provincia' => '15' , 'codigo_departamento'=> '10' ),
+			array( 'id' => 623, 'descripcion' => 'Libertador Gral San Martin', 'id_provincia' => '15' , 'codigo_departamento'=> '11' ),
+			array( 'id' => 625, 'descripcion' => 'Montecarlo', 'id_provincia' => '15' , 'codigo_departamento'=> '12' ),
+			array( 'id' => 627, 'descripcion' => 'Oberá', 'id_provincia' => '15' , 'codigo_departamento'=> '13' ),
+			array( 'id' => 628, 'descripcion' => 'San Ignacio', 'id_provincia' => '15' , 'codigo_departamento'=> '14' ),
+			array( 'id' => 629, 'descripcion' => 'San Javier', 'id_provincia' => '15' , 'codigo_departamento'=> '15' ),
+			array( 'id' => 630, 'descripcion' => 'San Pedro', 'id_provincia' => '15' , 'codigo_departamento'=> '16' ),
 			array( 'id' => 582, 'descripcion' => 'Bermejo', 'id_provincia' => '10' ),
 			array( 'id' => 583, 'descripcion' => 'Formosa', 'id_provincia' => '10' ),
 			array( 'id' => 585, 'descripcion' => 'Laishi', 'id_provincia' => '10' ),
@@ -528,6 +528,9 @@ class LoadDepartamentoData extends AbstractFixture implements OrderedFixtureInte
 
 			$entidadDepartamento->setDescripcion( $departamento['descripcion'] );
 			$entidadDepartamento->setProvincia( $this->getReference( 'provincia' . $departamento['id_provincia'] ) );
+			if ( isset( $departamento['codigo_departamento'] ) ) {
+				$entidadDepartamento->setCodigo( $departamento['codigo_departamento'] );
+			}
 
 
 			$manager->persist( $entidadDepartamento );
