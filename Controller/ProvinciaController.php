@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Matudelatower\UbicacionBundle\Entity\Provincia;
-use Matudelatower\UbicacionBundle\Form\ProvinciaType;
+use Matudelatower\UbicacionBundle\Form\Type\ProvinciaType;
 
 /**
  * Provincia controller.
@@ -36,7 +36,7 @@ class ProvinciaController extends Controller
     public function newAction(Request $request)
     {
         $provincium = new Provincia();
-        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\ProvinciaType', $provincium);
+        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\ProvinciaType', $provincium);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -74,7 +74,7 @@ class ProvinciaController extends Controller
     public function editAction(Request $request, Provincia $provincium)
     {
         $deleteForm = $this->createDeleteForm($provincium);
-        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\ProvinciaType', $provincium);
+        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\ProvinciaType', $provincium);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

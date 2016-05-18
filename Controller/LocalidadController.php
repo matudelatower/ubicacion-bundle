@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Matudelatower\UbicacionBundle\Entity\Localidad;
-use Matudelatower\UbicacionBundle\Form\LocalidadType;
 
 /**
  * Localidad controller.
@@ -36,7 +35,7 @@ class LocalidadController extends Controller
     public function newAction(Request $request)
     {
         $localidad = new Localidad();
-        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\LocalidadType', $localidad);
+        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\LocalidadType', $localidad);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -74,7 +73,7 @@ class LocalidadController extends Controller
     public function editAction(Request $request, Localidad $localidad)
     {
         $deleteForm = $this->createDeleteForm($localidad);
-        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\LocalidadType', $localidad);
+        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\LocalidadType', $localidad);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

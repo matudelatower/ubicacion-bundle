@@ -1,0 +1,4 @@
+<option value="">Provincias</option>
+{% for provincia in provincias %}
+    <option value="{{ provincia.id }}">{{ provincia.descripcion }}</option>
+{% endfor %}

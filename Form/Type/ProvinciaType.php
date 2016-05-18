@@ -1,12 +1,12 @@
 <?php
 
-namespace Matudelatower\UbicacionBundle\Form;
+namespace Matudelatower\UbicacionBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class LocalidadType extends AbstractType
+class ProvinciaType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -17,8 +17,7 @@ class LocalidadType extends AbstractType
         $builder
             ->add('descripcion')
             ->add('codigo')
-            ->add('codigoPostal')
-            ->add('departamento')
+            ->add('pais')
         ;
     }
     
@@ -28,12 +27,12 @@ class LocalidadType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Matudelatower\UbicacionBundle\Entity\Localidad'
+            'data_class' => 'Matudelatower\UbicacionBundle\Entity\Provincia'
         ));
     }
 
     public function getBlockPrefix() {
-        return 'matudelatower_ubicacionbundle_localidad_type';
+        return 'matudelatower_ubicacionbundle_provincia_type';
     }
 
     public function getName() {

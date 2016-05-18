@@ -1,0 +1,12 @@
+get_provincias:
+    path: /get_provincias
+    defaults: { _controller: "UbicacionBundle:Ajax:getProvincias" }
+    
+get_departamentos:
+    path: /get_departamentos
+    defaults: { _controller: "UbicacionBundle:Ajax:getDepartamentos" }
+
+get_localidades:
+    path: /get_localidades
+    defaults: { _controller: "UbicacionBundle:Ajax:getLocalidades" }
+

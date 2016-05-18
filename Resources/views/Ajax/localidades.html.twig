@@ -1,0 +1,4 @@
+<option value="">Localidades</option>
+{% for localidad in localidades %}
+    <option value="{{ localidad.id }}">{{ localidad.descripcion }}</option>
+{% endfor %}
