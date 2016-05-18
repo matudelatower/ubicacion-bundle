@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Matudelatower\UbicacionBundle\Entity\Pais;
-use Matudelatower\UbicacionBundle\Form\PaisType;
 
 /**
  * Pais controller.
@@ -36,7 +35,7 @@ class PaisController extends Controller
     public function newAction(Request $request)
     {
         $pai = new Pais();
-        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\PaisType', $pai);
+        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\PaisType', $pai);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -74,7 +73,7 @@ class PaisController extends Controller
     public function editAction(Request $request, Pais $pai)
     {
         $deleteForm = $this->createDeleteForm($pai);
-        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\PaisType', $pai);
+        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\PaisType', $pai);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

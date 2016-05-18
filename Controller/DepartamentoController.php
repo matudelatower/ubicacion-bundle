@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Matudelatower\UbicacionBundle\Entity\Departamento;
-use Matudelatower\UbicacionBundle\Form\DepartamentoType;
+use Matudelatower\UbicacionBundle\Form\Type\DepartamentoType;
 
 /**
  * Departamento controller.
@@ -36,7 +36,7 @@ class DepartamentoController extends Controller
     public function newAction(Request $request)
     {
         $departamento = new Departamento();
-        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\DepartamentoType', $departamento);
+        $form = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\DepartamentoType', $departamento);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -74,7 +74,7 @@ class DepartamentoController extends Controller
     public function editAction(Request $request, Departamento $departamento)
     {
         $deleteForm = $this->createDeleteForm($departamento);
-        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\DepartamentoType', $departamento);
+        $editForm = $this->createForm('Matudelatower\UbicacionBundle\Form\Type\DepartamentoType', $departamento);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
