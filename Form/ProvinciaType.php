@@ -30,4 +30,12 @@ class ProvinciaType extends AbstractType
             'data_class' => 'Matudelatower\UbicacionBundle\Entity\Provincia'
         ));
     }
+
+    public function getBlockPrefix() {
+        return 'matudelatower_ubicacionbundle_provincia_type';
+    }
+
+    public function getName() {
+        return $this->getBlockPrefix();
+    }
 }

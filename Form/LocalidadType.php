@@ -31,4 +31,12 @@ class LocalidadType extends AbstractType
             'data_class' => 'Matudelatower\UbicacionBundle\Entity\Localidad'
         ));
     }
+
+    public function getBlockPrefix() {
+        return 'matudelatower_ubicacionbundle_localidad_type';
+    }
+
+    public function getName() {
+        return $this->getBlockPrefix();
+    }
 }

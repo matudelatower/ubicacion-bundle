@@ -30,4 +30,12 @@ class PaisType extends AbstractType
             'data_class' => 'Matudelatower\UbicacionBundle\Entity\Pais'
         ));
     }
+
+    public function getBlockPrefix() {
+        return 'matudelatower_ubicacionbundle_pais_type';
+    }
+
+    public function getName() {
+        return $this->getBlockPrefix();
+    }
 }
