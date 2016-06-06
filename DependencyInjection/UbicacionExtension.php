@@ -13,24 +13,22 @@ use Symfony\Component\Config\Definition\Processor;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class UbicacionExtension extends Extension
-{
-    /**
-     * {@inheritdoc}
-     */
-    public function load(array $configs, ContainerBuilder $container)
-    {
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+class UbicacionExtension extends Extension {
+	/**
+	 * {@inheritdoc}
+	 */
+	public function load( array $configs, ContainerBuilder $container ) {
+		$loader = new Loader\YamlFileLoader( $container, new FileLocator( __DIR__ . '/../Resources/config' ) );
 
-        $configuration = new Configuration();
-        $processor = new Processor();
-        $config = $processor->processConfiguration($configuration, $configs);
+		$configuration = new Configuration();
+		$processor     = new Processor();
+		$config        = $processor->processConfiguration( $configuration, $configs );
 
-        if ($config['base_template']){
-            $loader->load('services.yml');
-            $container->setParameter('matudelatower.ubicacionbundle.template', $config['base_template']);
-        }
+		if ( isset( $config['base_template'] ) ) {
+			$loader->load( 'services.yml' );
+			$container->setParameter( 'matudelatower.ubicacionbundle.template', $config['base_template'] );
+		}
 
 
-    }
+	}
 }
