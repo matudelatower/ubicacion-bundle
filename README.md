@@ -1,4 +1,8 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/bed70b5b-89fc-487b-bc8a-b48f0bdb079f/mini.png)](https://insight.sensiolabs.com/projects/bed70b5b-89fc-487b-bc8a-b48f0bdb079f)
+[![Latest Stable Version](https://poser.pugx.org/matudelatower/ubicacion-bundle/v/stable)](https://packagist.org/packages/matudelatower/ubicacion-bundle)
+[![Total Downloads](https://poser.pugx.org/matudelatower/ubicacion-bundle/downloads)](https://packagist.org/packages/matudelatower/ubicacion-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/matudelatower/ubicacion-bundle/v/unstable)](https://packagist.org/packages/matudelatower/ubicacion-bundle)
+[![License](https://poser.pugx.org/matudelatower/ubicacion-bundle/license)](https://packagist.org/packages/matudelatower/ubicacion-bundle)
 
 Installation
 ============
