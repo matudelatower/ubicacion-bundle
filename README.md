@@ -84,8 +84,34 @@ ubicacion:
     prefix:   /ubicacion
 ```
 
+Optional:
+-------------------------
+
+If you want to use País, provincia, departamento, localidad dependent combo widget use in your form:
+
+```php
+
+//your YourBundle/Form/Type/YourForm
+use Matudelatower\UbicacionBundle\Form\Type\MatudelatowerLocalidadType;
+
+//...
+
+public function buildForm(FormBuilderInterface $builder, array $options)
+{
+
+$builder
+       ->add('localidad', new MatudelatowerLocalidadType())
+
+```
+
+and in your view import
+
+```html
+<script src="{{ asset('bundles/ubicacion/matudelatower_ubicacionbundle.js') }}"></script>
+```
+
 ##Enjoy!
 
 ## TODO
 
-- [ ] País, provincia, departamento, localidad dependent combo widget.
+- [x] País, provincia, departamento, localidad dependent combo widget.

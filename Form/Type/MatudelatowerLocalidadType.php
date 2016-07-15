@@ -10,7 +10,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class MatudealatowerLocalidadType extends AbstractType {
+class MatudelatowerLocalidadType extends AbstractType {
 	/**
 	 * @param FormBuilderInterface $builder
 	 * @param array $options
