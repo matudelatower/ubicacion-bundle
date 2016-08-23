@@ -47,16 +47,16 @@ class AddDepartamentoFieldSubscriber implements EventSubscriberInterface {
 				),
 				'query_builder'   => function ( EntityRepository $repository ) use ( $provincia ) {
 					$qb = $repository->createQueryBuilder( 'dep' );
-					if ( is_numeric( $provincia ) ) {
-						$qb->join( 'dep.provincia', 'provincia' )
-						   ->where( 'provincia.id = :loc' )
-						   ->setParameter( 'loc', $provincia );
-					} elseif ( $provincia instanceof \Matudelatower\UbicacionBundle\Entity\Provincia ) {
+					if ( $provincia instanceof \Matudelatower\UbicacionBundle\Entity\Provincia ) {
 						$qb->join( 'dep.provincia', 'provincia' )
 						   ->where( 'provincia = :loc' )
 						   ->setParameter( 'loc', $provincia );
 					}
-
+					else {
+						$qb->join( 'dep.provincia', 'provincia' )
+						   ->where( 'provincia.id = :loc' )
+						   ->setParameter( 'loc', $provincia );
+					}
 
 					return $qb;
 				}
