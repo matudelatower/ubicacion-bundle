@@ -45,13 +45,13 @@ class AddLocalidadFieldSubscriber implements EventSubscriberInterface {
 				),
 				'query_builder'   => function ( EntityRepository $repository ) use ( $departamento ) {
 					$qb = $repository->createQueryBuilder( 'loc' );
-					if ( is_numeric( $departamento ) ) {
-						$qb->join( 'loc.departamento', 'departamento' )
-						   ->where( 'departamento.id = :dep' )
-						   ->setParameter( 'dep', $departamento );
-					} elseif ( $departamento instanceof \Matudelatower\UbicacionBundle\Entity\Departamento ) {
+					if ( $departamento instanceof \Matudelatower\UbicacionBundle\Entity\Departamento ) {
 						$qb->join( 'loc.departamento', 'departamento' )
 						   ->where( 'departamento = :dep' )
+						   ->setParameter( 'dep', $departamento );
+					} else {
+						$qb->join( 'loc.departamento', 'departamento' )
+						   ->where( 'departamento.id = :dep' )
 						   ->setParameter( 'dep', $departamento );
 					}
 					return $qb;
