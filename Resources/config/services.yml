@@ -2,6 +2,25 @@ services:
 #    ubicacion.example:
 #        class: Matudelatower\UbicacionBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
-    ubicacion_bundle.configurator:
-        class: Matudelatower\UbicacionBundle\Services\UbicacionConfigurator
-        arguments: [%matudelatower.ubicacionbundle.template%]
+
+    _defaults:
+            # automatically injects dependencies in your services
+            autowire: true
+            # automatically registers your services as commands, event subscribers, etc.
+            autoconfigure: true
+            # this means you cannot fetch services directly from the container via $container->get()
+            # if you need to do this, you can override this setting on individual services
+            public: true
+
+#    ubicacion_bundle.configurator:
+#        class: Matudelatower\UbicacionBundle\Services\UbicacionConfigurator
+#        arguments: [%matudelatower.ubicacionbundle.template%]
+
+    Matudelatower\UbicacionBundle\DataFixtures\ORM\LoadPaisData:
+                tags: [doctrine.fixture.orm]
+    Matudelatower\UbicacionBundle\DataFixtures\ORM\LoadProvinciaData:
+                tags: [doctrine.fixture.orm]
+    Matudelatower\UbicacionBundle\DataFixtures\ORM\LoadDepartamentoData:
+                tags: [doctrine.fixture.orm]
+    Matudelatower\UbicacionBundle\DataFixtures\ORM\LoadLocalidadData:
+                tags: [doctrine.fixture.orm]
