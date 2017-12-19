@@ -104,10 +104,10 @@ $builder
 
 ```
 
-and in your view import
+and in your view include
 
-```html
-<script src="{{ asset('bundles/ubicacion/matudelatower_ubicacionbundle.js') }}"></script>
+```twig
+{% include '@Ubicacion/Default/matudelatower_ubicacionbundle.js.twig' %}
 ```
 
 ##Enjoy!
