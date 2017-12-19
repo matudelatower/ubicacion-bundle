@@ -10,6 +10,7 @@ namespace Matudelatower\UbicacionBundle\Form\EventListener;
 
 
 use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
@@ -34,12 +35,12 @@ class AddPaisFieldSubscriber implements EventSubscriberInterface {
 	private function addPaisForm( $form, $pais ) {
 
 		$form->add( $this->factory->createNamed( 'pais',
-			'entity',
+			EntityType::class,
 			$pais,
 			array(
 				'class'           => 'UbicacionBundle:Pais',
 				'auto_initialize' => false,
-				'empty_value'     => 'Seleccionar',
+				'placeholder'     => 'Seleccionar',
 				'mapped'          => false,
 				'attr'            => array(
 					'class' => 'select_pais select2',
